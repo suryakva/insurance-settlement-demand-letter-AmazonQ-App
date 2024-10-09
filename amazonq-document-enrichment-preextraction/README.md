@@ -1,4 +1,4 @@
-# Amazon Q with Document Enrichment
+# Amazon Q - Document Enrichment
 
 ## Description
 This repo provides a demo of using the S3 Connector for Amazon Q Business to index on S3 files that contain text and images of text. The images are indexed using document enrichment.
