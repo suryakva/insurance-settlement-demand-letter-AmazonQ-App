@@ -18,7 +18,7 @@ This repo provides CDK code to build the solution. using an AWS Lambda function 
 
 ## High Level Architecture of the solution with Amazon Q Business
 
-<img width="782" alt="image" src="https://github.com/user-attachments/assets/60304ad7-dca1-4257-a1d1-78fb5a839b8a">
+<img width="813" alt="image" src="https://github.com/user-attachments/assets/c0d82747-c041-4df5-aa57-3a68c2b3880d">
 
 
 ## Installation
