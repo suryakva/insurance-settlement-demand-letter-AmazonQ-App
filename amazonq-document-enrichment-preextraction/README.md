@@ -1,5 +1,23 @@
 # Amazon Q - Document Enrichment
 
+## Introduction
+A settlement demand letter is a formal request for compensation that is sent by an individual (the claimant) or their attorney to the party responsible (the insured) for an injury or their insurance company. It is often used in personal injury cases (from Automotive or other incidents) to help victims get compensation faster than a legal settlement.
+A settlement demand letter typically includes:
+> Incident details: A description of the accident, including the date, time, and location
+> Injuries: A description of the injuries and their effects on the victim's daily life
+> Treatment: A timeline of treatment, including the type of treatment and recovery progress
+> Medical bills: A list of medical bills and lost income statements
+> Liability: An explanation of why the policyholder/insured is liable for the victim's injuries
+> Compensation: The amount of compensation demanded from the insurance company
+
+However, there is no fixed format for these letters and are often unstructured with claim details mentioned across different sections of the document. Insurance claims specialists spend significant amount of time manually reviewing the settlement demand letter documents and subsequently perform background verification for each of the claims from third party sources. Also too often these letters have fraudulent, fabricated or exaggerated information about the incident and the declared damages to individuals and property. The proposed chat solution described in this post built with Amazon Q Business helps accelerate the review of these documents by quickly summarizing and extracting relevant data fields from the document while also suggesting possible fraud scenarios guiding the claims specialist to validate the verity of the claims.
+Amazon Q Business is a generative AI–powered assistant that can answer questions, provide summaries, generate content, and securely complete tasks based on data and information in your enterprise systems. It empowers employees to be more creative, data-driven, efficient, prepared, and productive.
+
+## Architecture
+
+![Pasted Graphic](https://github.com/user-attachments/assets/2bb9fd79-538d-400a-a1a2-29d09fb64566)
+
+
 ## Description
 This repo provides a demo of using the S3 Connector for Amazon Q Business to index on S3 files that contain text and images of text. The images are indexed using document enrichment.
 
