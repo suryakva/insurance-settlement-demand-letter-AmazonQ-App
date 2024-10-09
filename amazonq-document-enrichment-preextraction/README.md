@@ -12,20 +12,19 @@ A settlement demand letter typically includes:
 
 However, there is no fixed format for these letters and are often unstructured with claim details mentioned across different sections of the document. Insurance claims specialists spend significant amount of time manually reviewing the settlement demand letter documents and subsequently perform background verification for each of the claims from third party sources. Also too often these letters have fraudulent, fabricated or exaggerated information about the incident and the declared damages to individuals and property. 
 
-The proposed chat solution described in this post built with Amazon Q Business with data enrichment helps accelerate the review of these documents by quickly summarizing and extracting relevant text and image data from the document while also suggesting possible fraud scenarios guiding the claims specialist to validate the verity of the claims. Amazon Q Business is a generative AI–powered assistant that can answer questions, provide summaries, generate content, and securely complete tasks based on data and information in your enterprise systems. It empowers employees to be more creative, data-driven, efficient, prepared, and productive.
+## Solution Overview
+Amazon Q Business is a generative AI–powered assistant that can answer questions, provide summaries, generate content, and securely complete tasks based on data and information in your enterprise systems. It empowers employees to be more creative, data-driven, efficient, prepared, and productive. The proposed chat solution described in this post built with Amazon Q Business with Document Enrichment helps accelerate the review of these documents by quickly summarizing and extracting relevant text and image data from the document while also suggesting possible fraud scenarios guiding the claims specialist to validate the verity of the claims. 
+This repo provides CDK code to build the solution. using an AWS Lambda function that calls Amazon Bedrock (Claude 3 Sonnet model) based Document Enrichment feature of Amazon Q Business to index S3 files that contain text and images. 
 
 ## High Level Architecture of the solution with Amazon Q Business
 
 <img width="782" alt="image" src="https://github.com/user-attachments/assets/60304ad7-dca1-4257-a1d1-78fb5a839b8a">
 
 
-
-## Description
-This repo provides a demo of using the S3 Connector for Amazon Q Business to index on S3 files that contain text and images of text. The images are indexed using document enrichment.
-
-Amazon Q will fail to extract text natively from images or PDFs that contains images. If you can highlight text in a PDF, then Amazon Q will be able to index it.
-
 ## Installation
+
+### Prerequisite Step
+This solution uses AWS IAM Identity Center to grant access to users to the Amazon Q application. Create a user for this application in IAM Identity Center by referring to the steps [here](https://docs.aws.amazon.com/amazonq/latest/qbusiness-ug/create-application.html).
 
 ### Deploy the stack
 We use [AWS Cloud Development Kit (CDK)](https://docs.aws.amazon.com/cdk/v2/guide/home.html) to deploy the demo. If you haven't used CDK in the past, it will be helpful to quickly go through [getting started with CDK](https://docs.aws.amazon.com/cdk/v2/guide/getting_started.html)
@@ -94,6 +93,10 @@ The web experience is not created in this project. You may preview the web exper
 
 
 ## Cleanup
+
+## Conclusion
+Conclusion:
+As demonstrated in this solution, Amazon Q Business allows insurance claims specialists, developers, IT engineers, and business teams with minimal to no coding skills to quickly create an enterprise grade GenAI based chat application to improve their productivity in minutes. This application can be used across Financial Services, Healthcare, Media, and numerous other industries where documents need to be manually reviewed and processed for claims and other use cases.
 Delete the cloudformation stack to cleanup this demo. 
 
 ```
