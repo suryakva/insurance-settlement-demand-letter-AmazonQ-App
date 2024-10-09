@@ -13,8 +13,9 @@ A settlement demand letter typically includes:
 However, there is no fixed format for these letters and are often unstructured with claim details mentioned across different sections of the document. Insurance claims specialists spend significant amount of time manually reviewing the settlement demand letter documents and subsequently perform background verification for each of the claims from third party sources. Also too often these letters have fraudulent, fabricated or exaggerated information about the incident and the declared damages to individuals and property. 
 
 ## Solution Overview
-Amazon Q Business is a generative AI–powered assistant that can answer questions, provide summaries, generate content, and securely complete tasks based on data and information in your enterprise systems. It empowers employees to be more creative, data-driven, efficient, prepared, and productive. The proposed chat solution described in this post built with Amazon Q Business with Document Enrichment helps accelerate the review of these documents by quickly summarizing and extracting relevant text and image data from the document while also suggesting possible fraud scenarios guiding the claims specialist to validate the verity of the claims. 
-This repo provides CDK code to build the solution. using an AWS Lambda function that calls Amazon Bedrock (Claude 3 Sonnet model) based Document Enrichment feature of Amazon Q Business to index S3 files that contain text and images. 
+Amazon Q Business is a generative AI–powered assistant that can answer questions, provide summaries, generate content, and securely complete tasks based on data and information in your enterprise systems. It empowers employees to be more creative, data-driven, efficient, prepared, and productive. 
+The proposed chat solution described in this post built with Amazon Q Business with Document Enrichment, helps accelerate the review of these documents by quickly summarizing and extracting relevant text and image data from the document while also suggesting possible fraud scenarios, guiding the claims specialist to validate the verity of the claims. This repo provides CDK code to build the entire solution. Once the infrastructure is deployed with the CDK stack, add an Identity Center user to the deployed Q Application and run a Sync of the S3 Data Source. The Sync job passes the documents in S3 to the Lambda function which converts the pages from PDF to PNG files and makes an API call to Claude 3 Sonnet using Bedrock to transcribe images to text. The Bedrock text response is parsed and stored as a text file in the "pre-extraction" folder within the same S3 bucket for Amazon Q app to index the text content and respond to user queries from the Q Application.  
+
 
 ## High Level Architecture of the solution with Amazon Q Business
 
@@ -74,29 +75,11 @@ To deploy the stack, you can do:
 cdk deploy
 ```
 
-Once the deployment is complete, which can take 15-20 minutes, add your users.
+The deployment could take 15-20 minutes to complete.
 
-
-The deployment takes about 140s to finish. What's included in the stack:
-
-1. S3 bucket named `s3withdocumentenrichments-datasources3bucket*`
-2. Inside the bucket, we have populated it with data from the [documents folder](https://gitlab.aws.dev/q-business/knowledge-base/-/tree/main/contrib/demo/amazons3-document-enrichment-preextraction/documents?ref_type=heads)
-   <br><img src="./images/s3files.png" alt="S3" width="1000"/>
-3. Prehook lambda function `S3WithDocumentEnrichmentS-QEnrichmentLambda*` that will trigger Textract for OCR.
-4. Amazon Q application with data source `S3WithDocumentEnrichment`
-   
-### Sync Data source in Amazon Q Business
-In your S3 Datasource in Q Business, perform a sync. It will take several additional minutes to index the files.<br><img src="./images/sync_now.png" alt="Sync" width="1000"/>
-
-The web experience is not created in this project. You may preview the web experience and interact with Amazon Q.
-<br><img src="./images/webexperience.png" alt="Web Experience" width="1000"/>
 
 
 ## Cleanup
-
-## Conclusion
-Conclusion:
-As demonstrated in this solution, Amazon Q Business allows insurance claims specialists, developers, IT engineers, and business teams with minimal to no coding skills to quickly create an enterprise grade GenAI based chat application to improve their productivity in minutes. This application can be used across Financial Services, Healthcare, Media, and numerous other industries where documents need to be manually reviewed and processed for claims and other use cases.
 Delete the cloudformation stack to cleanup this demo. 
 
 ```
@@ -104,3 +87,7 @@ cdk destroy
 ```
 
 **Note**: It will also delete all objects in the S3 Bucket.
+
+## Conclusion
+Conclusion:
+As demonstrated in this solution, Amazon Q Business allows insurance claims specialists, developers, IT engineers, and business teams with minimal to no coding skills to quickly create an enterprise grade GenAI based chat application to improve their productivity in minutes. This application can be used across Financial Services, Healthcare, Media, and numerous other industries where documents need to be manually reviewed and processed for claims and other use cases.
