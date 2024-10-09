@@ -88,6 +88,21 @@ cdk destroy
 
 **Note**: It will also delete all objects in the S3 Bucket.
 
+## Settlement Document Screenshots:
+
+<img width="612" alt="image" src="https://github.com/user-attachments/assets/b0cf23a4-c364-44a7-958b-a1c36a9edd26">
+
+<img width="613" alt="image" src="https://github.com/user-attachments/assets/10b84e85-ccbd-422c-9cd8-377ef6308bd9">
+
+<img width="617" alt="image" src="https://github.com/user-attachments/assets/8f9fa6e2-3cac-4527-b707-05f16a632592">
+
+<img width="615" alt="image" src="https://github.com/user-attachments/assets/f8075a7b-7fb6-4380-92c3-49b88ad01eb2">
+
+
+
+
+
+
 ## Conclusion
 Conclusion:
 As demonstrated in this solution, Amazon Q Business allows insurance claims specialists, developers, IT engineers, and business teams with minimal to no coding skills to quickly create an enterprise grade GenAI based chat application to improve their productivity in minutes. This application can be used across Financial Services, Healthcare, Media, and numerous other industries where documents need to be manually reviewed and processed for claims and other use cases.
