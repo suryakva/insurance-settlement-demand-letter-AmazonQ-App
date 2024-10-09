@@ -1,4 +1,4 @@
-# S3 Connector with Document Enrichment
+# Amazon Q with Document Enrichment
 
 [:material-gitlab: View code](https://gitlab.aws.dev/q-business/knowledge-base/-/tree/main/contrib/demo/amazons3-document-enrichment-preextraction?ref_type=heads){ .md-button }
 
