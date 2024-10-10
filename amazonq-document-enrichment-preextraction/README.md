@@ -1,7 +1,7 @@
 # Settlement Demand Letter Review with Amazon Q Document Enrichment
 
 ## Introduction
-A settlement demand letter is a formal request for compensation that is sent by an individual (the claimant) or their attorney to the party responsible (the insured) for an injury or their insurance company. It is often used in personal injury cases (from Automotive or other incidents) to help victims get compensation faster than a legal settlement.
+A settlement demand letter is a formal request for compensation that is sent by an individual (the claimant) or their attorney to the party responsible (the insured) or their insurance company for an injury or loss. It is often used in personal injury cases (from Automotive or other incidents) to help victims get compensation faster than a legal settlement.
 A settlement demand letter typically includes:
 - Incident details: A description of the accident, including the date, time, and location
 - Injuries: A description of the injuries and their effects on the victim's daily life
