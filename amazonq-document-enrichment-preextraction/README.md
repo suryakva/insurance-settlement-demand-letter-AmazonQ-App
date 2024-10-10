@@ -19,7 +19,7 @@ The proposed chat solution described in this post built with Amazon Q Business w
 
 ## High Level Architecture of the solution with Amazon Q Business
 
-<img width="813" alt="image" src="https://github.com/user-attachments/assets/c0d82747-c041-4df5-aa57-3a68c2b3880d">
+<img width="818" alt="image" src="https://github.com/user-attachments/assets/ea15bad2-ce5d-4885-84fa-f52e95ed3f5e">
 
 
 ## Installation
