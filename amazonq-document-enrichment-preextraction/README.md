@@ -14,7 +14,7 @@ However, there is no fixed format for these letters and are often unstructured w
 
 ## Solution Overview
 Amazon Q Business is a generative AI–powered assistant that can answer questions, provide summaries, generate content, and securely complete tasks based on data and information in your enterprise systems. It empowers employees to be more creative, data-driven, efficient, prepared, and productive. 
-The proposed chat solution described in this post built with Amazon Q Business with Document Enrichment, helps accelerate the review of these documents by quickly summarizing and extracting relevant text and image data from the document while also suggesting possible fraud scenarios, guiding the claims specialist to validate the verity of the claims. This repo provides CDK code to build the entire solution. Once the infrastructure is deployed with the CDK stack, add an Identity Center user to the deployed Q Application and run a Sync of the S3 Data Source. The Sync job passes the documents in S3 to the Lambda function which converts the pages from PDF to PNG files and makes an API call to Claude 3 Sonnet using Bedrock to transcribe images to text. The Bedrock text response is parsed and stored as a text file in the "pre-extraction" folder within the same S3 bucket for Amazon Q app to index the text content and respond to user queries from the Q Application.  
+The proposed chat solution described in this post built with Amazon Q Business with Document Enrichment, helps accelerate the review of these documents by quickly summarizing and extracting relevant text and image data from the document while also suggesting possible fraud scenarios, guiding the claims specialist to validate the verity of the claims. This repo provides CDK code to build the entire solution. Once the infrastructure is deployed with the CDK stack, add an Identity Center user to the deployed Q Application and run a Sync of the S3 Data Source. The Sync job passes the documents in S3 to the Lambda function which converts the pages from PDF to PNG files and makes an API call to Claude 3 Sonnet using Bedrock to transcribe images to text. The Bedrock text response is parsed and stored as a text file in the "pre-extraction" folder within the same S3 bucket for Amazon Q app to index the text content and respond to user queries in the Q Application.  
 
 
 ## High Level Architecture of the solution with Amazon Q Business
@@ -78,17 +78,9 @@ cdk deploy
 The deployment could take 15-20 minutes to complete.
 
 
+## Review and Test the Solution
 
-## Cleanup
-Delete the cloudformation stack to cleanup this demo. 
-
-```
-cdk destroy
-```
-
-**Note**: It will also delete all objects in the S3 Bucket.
-
-## Settlement Document Screenshots:
+### Review the Settlement Document:
 
 <img width="612" alt="image" src="https://github.com/user-attachments/assets/b0cf23a4-c364-44a7-958b-a1c36a9edd26">
 
@@ -99,7 +91,7 @@ cdk destroy
 <img width="615" alt="image" src="https://github.com/user-attachments/assets/f8075a7b-7fb6-4380-92c3-49b88ad01eb2">
 
 
-## Amazon Q Application Screenshots:
+### Test the Amazon Q Application:
 
 <img width="1426" alt="image" src="https://github.com/user-attachments/assets/8235a4d2-c5fb-4de7-af04-ed46ac2cbc4b">
 
@@ -112,11 +104,14 @@ cdk destroy
 <img width="1427" alt="image" src="https://github.com/user-attachments/assets/a7edbe36-9526-4ab8-8e6f-91cc9af2abe4">
 
 
+## Cleanup
+Delete the cloudformation stack to cleanup this demo. 
 
+```
+cdk destroy
+```
 
-
-
-
+**Note**: It will also delete all objects in the S3 Bucket.
 
 ## Conclusion
 Conclusion:
