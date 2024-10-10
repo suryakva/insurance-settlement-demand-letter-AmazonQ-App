@@ -22,7 +22,7 @@ The proposed chat solution described in this post built with Amazon Q Business w
 <img width="818" alt="image" src="https://github.com/user-attachments/assets/ea15bad2-ce5d-4885-84fa-f52e95ed3f5e">
 
 
-## Installation
+## Solution Deployment
 
 ### Prerequisite Step
 This solution uses AWS IAM Identity Center to grant access to users to the Amazon Q application. Create a user for this application in IAM Identity Center by referring to the steps [here](https://docs.aws.amazon.com/amazonq/latest/qbusiness-ug/create-application.html).
