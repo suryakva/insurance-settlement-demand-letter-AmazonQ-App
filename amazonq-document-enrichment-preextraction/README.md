@@ -99,6 +99,19 @@ cdk destroy
 <img width="615" alt="image" src="https://github.com/user-attachments/assets/f8075a7b-7fb6-4380-92c3-49b88ad01eb2">
 
 
+## Amazon Q Application Screenshots:
+
+<img width="1426" alt="image" src="https://github.com/user-attachments/assets/8235a4d2-c5fb-4de7-af04-ed46ac2cbc4b">
+
+<img width="1425" alt="image" src="https://github.com/user-attachments/assets/4d6d0469-3a60-4bae-ba42-97e291c7fb89">
+
+<img width="1426" alt="image" src="https://github.com/user-attachments/assets/7dc6811f-2a57-4097-bdd4-ad0a41599448">
+
+<img width="1427" alt="image" src="https://github.com/user-attachments/assets/a7edbe36-9526-4ab8-8e6f-91cc9af2abe4">
+
+
+
+
 
 
 
